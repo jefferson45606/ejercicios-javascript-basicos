@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria de edades</title>
+</head>
+
+<body>
+    <script>
+        const edad = parseInt(prompt("Ingresa tu edad:"));
+
+        if (isNaN(edad) || edad < 0) {
+            console.log("Por favor, ingresa edad válida.");
+        } else {
+            switch (true) {
+                case edad >= 0 && edad <= 10:
+                    console.log("estas en la categoria de niño.");
+                    break;
+                case edad >= 11 && edad <= 17:
+                    console.log("estas en la categoria de adolescente.");
+                    break;
+                case edad >= 18 && edad <= 59:
+                    console.log("estas en la categoria de adulto.");
+                    break;
+                case edad >= 60 && edad <= 100:
+                    console.log("estas en la categoria de adulto mayor (ya casi no te queda tiempo).");
+                    break;
+                default:
+                    console.log("edad no reconocida.");
+            }
+        }
+    </script>
+</body>
+</html>

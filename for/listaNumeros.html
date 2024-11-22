@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de numeros</title>
+</head>
+
+<body>
+    <script>
+        const cantidad= parseInt(prompt("Ingresa la cantidad de numeros a generar:"));
+
+        if (isNaN(cantidad) || cantidad < 0) {
+            console.log("Por favor, ingresa un número válido.");
+        } else {
+            let suma = 0;
+            for (let i = 0; i < cantidad; i++) {
+                const numero=parseFloat(prompt("Ingresa un numero:"));
+                if (isNaN(numero)) {
+                    console.log("Por favor, ingresa un número válido.");
+                    continue;
+                    
+                }
+                suma += numero;
+            }
+            console.log(`La suma de los números ingresados es ${suma}.`);
+        }
+    </script>
+</body>
+</html>

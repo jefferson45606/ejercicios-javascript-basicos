@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const calificacion = parseInt(prompt("Ingresa la calificación del estudiante:"));
+        if (isNaN(calificacion) || calificacion < 0 || calificacion > 100) {
+            console.log("Por favor, ingresa una calificación válida entre 0 y 100.");
+        } else {
+            switch (true) {
+                case calificacion >= 90 && calificacion <= 100:
+                    console.log("Tu calificacion es A. El estudiante a sido aprobado.");
+                    break;
+                case calificacion >= 80 && calificacion <= 89:
+                    console.log("Tu calificacion es B. El estudiante a sido aprobado.");
+                    break;
+                case calificacion >= 70 && calificacion <= 79:
+                    console.log("Tu calificacion es C. El estudiante a sido aprobado.");
+                    break;
+                case calificacion >= 60 && calificacion <= 69:
+                    console.log("Tu calificacion es D. El estudiante a sido aprobado.");
+                    break;
+                case calificacion >= 0 && calificacion <= 59:
+                    console.log("Tu calificacion es F. El estudiante a sido reprobado.");
+                    break;
+                default:
+                    console.log("Calificación no reconocida.");
+            }
+        }   
+    </script>
+</body>
+</html>

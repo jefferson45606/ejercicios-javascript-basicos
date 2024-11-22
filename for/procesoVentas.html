@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proceso de ventas de productos</title>
+</head>
+
+<body>
+    <script>
+        const cantidadProductos = parseInt(prompt("¿Cuántos productos deseas registrar en la venta?"));
+        if (isNaN(cantidadProductos) || cantidadProductos <= 0) {
+        console.log("Por favor, ingresa un número válido mayor a 0.");
+        } else {
+        const ventas = []; 
+        let totalVentas = 0; 
+
+
+        for (let i = 1; i <= cantidadProductos; i++) {
+            const nombreProducto = prompt(`Ingresa el nombre del producto ${i}:`);
+            const precio = parseFloat(prompt(`Ingresa el precio del producto ${nombreProducto}:`));
+            const cantidad = parseInt(prompt(`Ingresa la cantidad vendida de ${nombreProducto}:`));
+
+
+            if (!nombreProducto.trim() || isNaN(precio) || precio <= 0 || isNaN(cantidad) || cantidad <= 0) {
+            console.log(`Los datos del producto ${i} no son válidos. Se ignorará.`);
+            continue;
+            }
+
+            const totalProducto = precio * cantidad;
+
+            ventas.push({ nombre: nombreProducto.trim(), precio, cantidad, totalProducto });
+
+            totalVentas += totalProducto;
+        }
+
+        console.log("Resumen de ventas:");
+        ventas.forEach((venta, index) => {
+            console.log(
+            `${index + 1}. Producto: ${venta.nombre}, Precio: $${venta.precio.toFixed(2)}, Cantidad: ${venta.cantidad}, Total: $${venta.totalProducto.toFixed(2)}`
+            );
+        });
+        console.log(`Total de ventas: $${totalVentas.toFixed(2)}`);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobar examen</title>
+</head>
+
+<body>
+    <script>
+        const calificacion = parseFloat(prompt("Ingresa la calificación del estudiante:"));
+
+    if (isNaN(calificacion) || calificacion < 0 || calificacion > 100) {
+        console.log("Por favor, ingresa una calificación válida entre 0 y 100.");
+    } else {
+
+
+    if (calificacion >= 60) {
+        console.log(`El estudiante aprobó con una calificación de ${calificacion}.`);
+    } else {
+        console.log(`El estudiante reprobó con una calificación de ${calificacion} que malo >:D.`);
+    }
+}
+
+    </script>
+</body>
+</html>

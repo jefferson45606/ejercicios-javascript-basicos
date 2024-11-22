@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>secuancia de numeros</title>
+</head>
+
+<body>
+    <script>
+        const numero = parseInt(prompt("Ingresa un número entero que sea positivo:"));
+        if (isNaN(numero) || numero <= 0) {
+            console.log("Por favor, ingresa un número entero positivo.");
+        }   else {
+            let contador = 1;
+            while (contador <= numero) {
+                console.log(contador);
+                contador++;
+            }
+        }
+    </script>
+</body>
+</html>

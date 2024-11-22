@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numero1 = parseInt(prompt("Ingresa el primer número:"));
+        const numero2 = parseInt(prompt("Ingresa el segundo número:"));
+        const operador = prompt("Ingresa un operador aritmetico(+, -, *, /):");
+
+        if (isNaN(numero1) || isNaN(numero2)) {
+            console.log("Por favor, ingresa números válidos.");
+        } else {
+            switch (operador) {
+                case "+":
+                    console.log(`El resultado de ${numero1} + ${numero2} es ${numero1 + numero2}.`);
+                    break;
+                case "-":
+                    console.log(`El resultado de ${numero1} - ${numero2} es ${numero1 - numero2}.`);
+                    break;
+                case "*":
+                    console.log(`El resultado de ${numero1} * ${numero2} es ${numero1 * numero2}.`);
+                    break;
+                case "/":
+                    console.log(`El resultado de ${numero1} / ${numero2} es ${numero1 / numero2}.`);
+                    break;
+                default:
+                    console.log("Operador no reconocido.");
+            }
+        }
+    </script>
+</body>
+</html>

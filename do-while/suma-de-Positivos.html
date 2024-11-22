@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suma de numeros positivos</title>
+</head>
+
+<body>
+    <script>
+        let suma = 0;
+        let numero;
+
+        do {
+            numero = parseInt(prompt("ingrese un numero positivo (para finalizar ingrese un numero negativo):"));
+
+            if (numero >=0) {
+                suma += numero;
+            } else  if (isNaN(numero)) {
+                console.log("Por favor, ingresa un número válido.");
+            }
+        } while (numero >= 0);
+        console.log(`La suma de los números positivos ingresados es ${suma}.`);
+    </script>
+</body>
+</html>

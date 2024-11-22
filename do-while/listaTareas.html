@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestor de tareas</title>
+</head>
+
+<body>
+    <script>
+        let listaTareas = "";
+        let agregarOtra;
+
+        do {
+        const nombreTarea = prompt("Ingresa el nombre de la tarea:");
+        const descripcionTarea = prompt("Ingresa una breve descripción de la tarea:");
+        const fechaVencimiento = prompt("Ingresa la fecha de vencimiento de la tarea (formato: DD/MM/AAAA):");
+
+        if (!nombreTarea || !descripcionTarea || !fechaVencimiento) {
+            console.log("Todos los campos son obligatorios. Por favor, inténtalo de nuevo.");
+        } else {
+            listaTareas += `Tarea: ${nombreTarea}\nDescripción: ${descripcionTarea}\nFecha de vencimiento: ${fechaVencimiento}\n\n`;
+            console.log("¡Tarea agregada exitosamente!");
+        }
+
+        agregarOtra = prompt("¿Deseas agregar otra tarea? (s/n):").toLowerCase();
+        } while (agregarOtra === "s" || agregarOtra === "S" || agregarOtra === "si" || agregarOtra === "Si" || agregarOtra === "sí" || agregarOtra === "Sí");
+
+        if (listaTareas) {
+        console.log("Lista de tareas:");
+        console.log(listaTareas);
+        } else {
+        console.log("No se agregaron tareas.");
+        }
+    </script>
+</body>
+</html>
